@@ -15,7 +15,7 @@ body {
     radial-gradient(circle at top left, #3b2a16, transparent 35%),
     linear-gradient(135deg, #15110d, #080808);
   color: #1f1f1f;
-  padding: 24px;
+  padding: 18px;
 }
 
 a {
@@ -24,15 +24,17 @@ a {
 }
 
 .portfolio-shell {
-  min-height: calc(100vh - 48px);
+  min-height: calc(100vh - 36px);
   display: grid;
   grid-template-columns: 180px 36% 1fr;
   border: 8px solid #b3484d;
   border-radius: 28px;
   overflow: hidden;
-  background: #0d0d0d;
+  background: #f4efe7;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
 }
+
+/* Sidebar */
 
 .sidebar {
   background: linear-gradient(180deg, #080808, #14110c);
@@ -41,6 +43,7 @@ a {
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(212, 175, 100, 0.3);
+  z-index: 20;
 }
 
 .logo {
@@ -53,7 +56,7 @@ a {
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .nav a {
@@ -76,6 +79,10 @@ a {
   color: #a99d8e;
 }
 
+.sidebar-footer p {
+  margin-top: 8px;
+}
+
 .socials {
   display: flex;
   gap: 10px;
@@ -87,13 +94,17 @@ a {
   color: #d6ae62;
 }
 
+/* Hero art */
+
 .hero-art {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 70% 30%, rgba(214, 174, 98, 0.4), transparent 12%),
-    radial-gradient(circle at 50% 50%, rgba(214, 174, 98, 0.2), transparent 35%),
+    radial-gradient(circle at 72% 24%, rgba(214, 174, 98, 0.35), transparent 8%),
+    radial-gradient(circle at 72% 34%, rgba(214, 174, 98, 0.32), transparent 16%),
+    radial-gradient(circle at 48% 28%, rgba(214, 174, 98, 0.12), transparent 25%),
     linear-gradient(135deg, #0d0c0a, #211b13);
+  z-index: 1;
 }
 
 .hero-art::before {
@@ -101,24 +112,10 @@ a {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(214, 174, 98, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(214, 174, 98, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(214, 174, 98, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(214, 174, 98, 0.1) 1px, transparent 1px);
   background-size: 48px 48px;
-  opacity: 0.3;
-}
-
-.hero-art::after {
-  content: "";
-  position: absolute;
-  right: -75px;
-  top: 0;
-  width: 160px;
-  height: 100%;
-  background: #f4efe7;
-  transform: skewX(-18deg);
-  transform-origin: top;
-  border-left: 8px solid #c59a55;
-  z-index: 5;
+  opacity: 0.28;
 }
 
 .hero-glow {
@@ -127,15 +124,15 @@ a {
   height: 420px;
   border: 1px solid rgba(214, 174, 98, 0.35);
   border-radius: 50%;
-  top: 110px;
-  left: 80px;
+  top: 105px;
+  left: 90px;
   box-shadow: 0 0 80px rgba(214, 174, 98, 0.25);
 }
 
 .orb {
   position: absolute;
-  top: 180px;
-  right: 110px;
+  top: 160px;
+  right: 80px;
   width: 95px;
   height: 95px;
   border-radius: 50%;
@@ -148,7 +145,7 @@ a {
 .figure {
   position: absolute;
   left: 95px;
-  bottom: 110px;
+  bottom: 115px;
   width: 260px;
   height: 420px;
   filter: drop-shadow(0 0 25px rgba(214, 174, 98, 0.7));
@@ -181,12 +178,59 @@ a {
   border-radius: 999px;
 }
 
+/* Right content panel */
+
 .content-panel {
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.92), rgba(244,239,231,0.96)),
-    radial-gradient(circle at top right, rgba(214, 174, 98, 0.2), transparent 30%);
-  padding: 36px 44px;
   position: relative;
+  z-index: 5;
+  margin-left: -150px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(244, 239, 231, 0.97)),
+    radial-gradient(circle at top right, rgba(214, 174, 98, 0.16), transparent 30%);
+  clip-path: polygon(150px 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+/* Gold diagonal border */
+.content-panel::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 112px;
+  width: 8px;
+  height: calc(100% + 80px);
+  background: #c59a55;
+  transform: skewX(-18deg);
+  transform-origin: top;
+  z-index: 1;
+}
+
+.content-inner {
+  position: relative;
+  z-index: 3;
+  min-height: 100%;
+  padding: 36px 44px 36px 190px;
+}
+
+/* Staircase alignment */
+
+.diagonal-step {
+  transition: margin-left 0.2s ease;
+}
+
+.step-1 {
+  margin-left: 58px;
+  max-width: calc(100% - 58px);
+}
+
+.step-2 {
+  margin-left: 18px;
+  max-width: calc(100% - 18px);
+}
+
+.step-3 {
+  margin-left: 0;
+  max-width: 100%;
 }
 
 .status {
@@ -195,7 +239,7 @@ a {
   padding: 10px 18px;
   border: 1px solid rgba(115, 90, 49, 0.25);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.72);
   color: #222;
   font-size: 14px;
 }
@@ -205,20 +249,21 @@ a {
 }
 
 .intro {
-  margin-top: 48px;
+  margin-top: 42px;
   max-width: 720px;
 }
 
 .intro h1 {
-  font-size: clamp(44px, 6vw, 82px);
-  letter-spacing: -3px;
+  font-size: clamp(54px, 5.2vw, 86px);
+  letter-spacing: -4px;
   color: #222;
+  line-height: 0.95;
 }
 
 .intro h2 {
   display: inline-block;
-  margin: 12px 0 18px;
-  padding: 8px 24px;
+  margin: 18px 0 18px;
+  padding: 8px 28px;
   background: linear-gradient(90deg, #111, #332819);
   color: #d6ae62;
   font-size: 18px;
@@ -228,6 +273,7 @@ a {
 .intro p {
   color: #5d574f;
   line-height: 1.6;
+  max-width: 680px;
 }
 
 .card-section,
@@ -239,6 +285,10 @@ a {
   border-radius: 22px;
   padding: 20px;
   box-shadow: 0 16px 40px rgba(55, 40, 20, 0.08);
+}
+
+.card-section {
+  margin-top: 30px;
 }
 
 .section-header {
@@ -323,6 +373,10 @@ a {
   border-bottom: 1px solid rgba(166, 125, 58, 0.15);
 }
 
+.skill:last-child {
+  border-bottom: none;
+}
+
 .skill p {
   color: #5f5a52;
   font-size: 14px;
@@ -360,6 +414,8 @@ a {
   color: #2a241c;
 }
 
+/* Tablet layout */
+
 @media (max-width: 1100px) {
   .portfolio-shell {
     grid-template-columns: 150px 1fr;
@@ -369,10 +425,32 @@ a {
     display: none;
   }
 
+  .content-panel {
+    margin-left: 0;
+    clip-path: none;
+  }
+
+  .content-panel::before {
+    display: none;
+  }
+
+  .content-inner {
+    padding: 28px 24px;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }
+
+  .step-1,
+  .step-2,
+  .step-3 {
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
+
+/* Mobile layout */
 
 @media (max-width: 760px) {
   body {
@@ -390,7 +468,7 @@ a {
     display: none;
   }
 
-  .content-panel {
+  .content-inner {
     padding: 28px 20px;
   }
 
@@ -398,7 +476,17 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .intro {
+    margin-top: 34px;
+  }
+
   .intro h1 {
     font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .intro h2 {
+    font-size: 15px;
+    padding: 8px 16px;
   }
 }
