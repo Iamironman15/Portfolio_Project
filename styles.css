@@ -4,7 +4,15 @@
   --diag-offset: 150px;
   --diag-line-width: 8px;
   --shell-radius: 28px;
-  --page-bg-light: #f4efe7;
+  --page-bg-light: #ffffff;
+
+  --right-panel-bg:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fbf8f2 45%,
+      #f4efe7 100%
+    );
   --gold-1: #fff1bf;
   --gold-2: #e4bc69;
   --gold-3: #c38d3d;
@@ -44,7 +52,7 @@ a {
   border: none;
   border-radius: var(--shell-radius);
   overflow: hidden;
-  background: var(--page-bg-light);
+  background: var(--right-panel-bg);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
   position: relative;
 }
@@ -227,9 +235,7 @@ a {
   position: relative;
   z-index: 5;
   margin-left: calc(-1 * var(--diag-offset));
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(244, 239, 231, 0.98)),
-    radial-gradient(circle at top right, rgba(214, 174, 98, 0.12), transparent 30%);
+  background: var(--right-panel-bg);
   clip-path: polygon(var(--diag-offset) 0, 100% 0, 100% 100%, 0 100%);
   overflow: hidden;
 }
@@ -248,18 +254,18 @@ a {
 }
 
 .step-1 {
-  margin-left: 52px;
+  margin-left: 12px;
   max-width: calc(100% - 52px);
 }
 
 .step-2 {
-  margin-left: 16px;
-  max-width: calc(100% - 16px);
+  margin-left: -48px;
+  max-width: calc(100% + 48px);
 }
 
 .step-3 {
-  margin-left: 0;
-  max-width: 100%;
+  margin-left: -90px;
+  max-width: calc(100% + 72px);
 }
 
 .status {
