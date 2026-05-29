@@ -18,3 +18,8 @@ Update 5/27/26
     - Forms are bad (contact me forms)
       - Make sure the email can't be web-scraped
     - Take a look at Svelte for webdev
+ 
+Update 5/28/26
+- Slightly improved stagger
+- Fixed color inconsistencies with background
+- 
