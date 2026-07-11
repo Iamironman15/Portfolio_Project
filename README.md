@@ -22,4 +22,10 @@ Update 5/27/26
 Update 5/28/26
 - Slightly improved stagger
 - Fixed color inconsistencies with background
-- 
+
+Update 7/10/26
+- Saw a instagram reel from a uiux designer who will post a tutorial on figma like HSR
+- Finished LinkedIn Post on internship which has been taking up time
+- Reviewed figma
+- Reminder for future self: open with web server on index.html.
+

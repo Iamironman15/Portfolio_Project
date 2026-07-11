@@ -3,35 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Aaron Agcaoili's computer science and cybersecurity portfolio."
+  />
+
   <title>Aaron Agcaoili | Portfolio</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <main class="portfolio-shell">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">△</div>
+      <a class="logo" href="index.html" aria-label="Return to homepage">
+        △
+      </a>
 
-      <nav class="nav">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="active" href="index.html" aria-current="page">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="experience.html">
+          Experience
+        </a>
+
+        <a href="skills.html">
+          Skills
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
       </nav>
 
       <div class="sidebar-footer">
         <div class="socials">
-          <a href="https://github.com/Iamironman15" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/aaronagcaoili/" target="_blank">LinkedIn</a>
-          <a href="mailto:aaron08831@gmail.com">Email</a>
+          <a
+            href="https://github.com/Iamironman15"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/aaronagcaoili/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a href="mailto:aaron08831@gmail.com">
+            Email
+          </a>
         </div>
+
         <p>© 2026 Aaron Agcaoili</p>
-        <p>UI Inspired by Honkai: Star Rail</p>
+        <p>UI inspired by Honkai: Star Rail</p>
       </div>
     </aside>
 
-    <section class="hero-art" id="home">
+    <!-- Decorative hero panel -->
+    <section class="hero-art" aria-hidden="true">
       <div class="hero-glow"></div>
       <div class="orb"></div>
 
@@ -42,64 +88,129 @@
       </div>
     </section>
 
+    <!-- Main homepage content -->
     <section class="content-panel">
       <div class="content-inner">
-        <div class="status">● Open to Opportunities</div>
+        <div class="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to Opportunities
+        </div>
 
         <header class="intro diagonal-step step-1">
           <h1>Aaron Agcaoili</h1>
-          <h2>Computer Science Student & Cybersecurity Enthusiast</h2>
+
+          <h2>
+            Computer Science Student &amp; Cybersecurity Enthusiast
+          </h2>
+
           <p>
-            Passionate about building secure systems, solving technical problems,
-            and learning through hands-on projects in cybersecurity, software, and AI.
+            Passionate about building secure systems, solving technical
+            problems, and learning through hands-on projects in cybersecurity,
+            software, and AI.
           </p>
         </header>
 
-        <section class="card-section diagonal-step step-2" id="projects">
+        <!-- Featured projects -->
+        <section
+          class="card-section diagonal-step step-2"
+          aria-labelledby="featured-projects-title"
+        >
           <div class="section-header">
-            <h3>Featured Projects</h3>
-            <a href="#">View all projects →</a>
+            <h3 id="featured-projects-title">
+              Featured Projects
+            </h3>
+
+            <a href="projects.html">
+              View all projects →
+            </a>
           </div>
 
           <div class="project-grid">
-            <article class="project-card">
-              <div class="project-image">🛡️</div>
-              <h4>Network Sentinel</h4>
-              <p>Real-time network monitoring and alerting dashboard.</p>
-              <div class="tags">
-                <span>Python</span>
-                <span>Wazuh</span>
-                <span>OpenSearch</span>
+            <a
+              class="project-card"
+              href="projects.html#network-sentinel"
+              aria-label="View the Network Sentinel project"
+            >
+              <div class="project-image" aria-hidden="true">
+                🛡️
               </div>
-            </article>
 
-            <article class="project-card">
-              <div class="project-image">🔐</div>
-              <h4>CandidATS</h4>
-              <p>Applicant tracking system for candidates using modern web tools.</p>
-              <div class="tags">
-                <span>Next.js</span>
-                <span>TypeScript</span>
-                <span>PostgreSQL</span>
-              </div>
-            </article>
+              <div class="project-card-content">
+                <h4>Network Sentinel</h4>
 
-            <article class="project-card">
-              <div class="project-image">⚙️</div>
-              <h4>AI Inference Pipeline</h4>
-              <p>High-performance YOLOv8 inference pipeline using CUDA and MPI.</p>
-              <div class="tags">
-                <span>C++</span>
-                <span>CUDA</span>
-                <span>MPI</span>
+                <p>
+                  Real-time network monitoring and alerting dashboard.
+                </p>
+
+                <div class="tags" aria-label="Technologies used">
+                  <span>Python</span>
+                  <span>Wazuh</span>
+                  <span>OpenSearch</span>
+                </div>
               </div>
-            </article>
+            </a>
+
+            <a
+              class="project-card"
+              href="projects.html#candidats"
+              aria-label="View the CandidATS project"
+            >
+              <div class="project-image" aria-hidden="true">
+                🔐
+              </div>
+
+              <div class="project-card-content">
+                <h4>CandidATS</h4>
+
+                <p>
+                  Applicant tracking system for candidates using modern web
+                  tools.
+                </p>
+
+                <div class="tags" aria-label="Technologies used">
+                  <span>Next.js</span>
+                  <span>TypeScript</span>
+                  <span>PostgreSQL</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="projects.html#ai-inference-pipeline"
+              aria-label="View the AI Inference Pipeline project"
+            >
+              <div class="project-image" aria-hidden="true">
+                ⚙️
+              </div>
+
+              <div class="project-card-content">
+                <h4>AI Inference Pipeline</h4>
+
+                <p>
+                  High-performance YOLOv8 inference pipeline using CUDA and MPI.
+                </p>
+
+                <div class="tags" aria-label="Technologies used">
+                  <span>C++</span>
+                  <span>CUDA</span>
+                  <span>MPI</span>
+                </div>
+              </div>
+            </a>
           </div>
         </section>
 
+        <!-- Skills and contact preview -->
         <section class="lower-grid diagonal-step step-3">
-          <div class="skills-card" id="skills">
-            <h3>Core Skills</h3>
+          <div class="skills-card">
+            <div class="mini-card-header">
+              <h3>Core Skills</h3>
+
+              <a href="skills.html">
+                View all →
+              </a>
+            </div>
 
             <div class="skill">
               <div>
@@ -111,7 +222,9 @@
             <div class="skill">
               <div>
                 <strong>Security</strong>
-                <p>Networking, SIEM, Vulnerability Management</p>
+                <p>
+                  Networking, SIEM, Vulnerability Management
+                </p>
               </div>
             </div>
 
@@ -123,11 +236,21 @@
             </div>
           </div>
 
-          <div class="contact-card" id="contact">
+          <div class="contact-card">
             <h3>Let's Connect</h3>
-            <p>Interested in collaborating on a project or discussing opportunities?</p>
-            <a class="primary-btn" href="#projects">View Projects →</a>
-            <a class="secondary-btn" href="mailto:aaron08831@gmail.com">Contact Me →</a>
+
+            <p>
+              Interested in collaborating on a project or discussing
+              opportunities?
+            </p>
+
+            <a class="primary-btn" href="projects.html">
+              View Projects →
+            </a>
+
+            <a class="secondary-btn" href="contact.html">
+              Contact Me →
+            </a>
           </div>
         </section>
       </div>
