@@ -22,6 +22,8 @@ Update 5/27/26
 Update 5/28/26
 - Slightly improved stagger
 - Fixed color inconsistencies with background
+- <img width="2559" height="1174" alt="image" src="https://github.com/user-attachments/assets/8a142c8c-ef44-4fa8-a21f-c3a62495300d" />
+
 
 Update 7/10/26
 - Saw a instagram reel from a uiux designer who will post a tutorial on figma like HSR
