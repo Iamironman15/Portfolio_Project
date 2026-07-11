@@ -28,4 +28,4 @@ Update 7/10/26
 - Finished LinkedIn Post on internship which has been taking up time
 - Reviewed figma
 - Reminder for future self: open with web server on index.html.
-
+- Got rid of scrollbar (May adjust or undo later)
