@@ -31,3 +31,9 @@ Update 7/10/26
 - Reviewed figma
 - Reminder for future self: open with web server on index.html.
 - Got rid of scrollbar (May adjust or undo later)
+
+Update 9/19/26
+- Restarted work on the project.
+- Started work on About Me page. Deciding on cards to have and an appropriate bio.
+- Will attempt to try and improve UI of the site later.
+- Note: will want to add downloadable/viewable pdf of resume onto main page later.

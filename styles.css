@@ -906,7 +906,9 @@ svg {
   letter-spacing: -3px;
 }
 
-.page-header p {
+.page-header p, 
+.page-card ul,
+.page-card li {
   max-width: 720px;
 
   color: var(--text-medium);
@@ -940,6 +942,11 @@ svg {
 .page-card p {
   color: var(--text-medium);
   line-height: 1.65;
+}
+
+.page-card ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .full-width-card {
